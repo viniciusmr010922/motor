@@ -1,0 +1,79 @@
+/******************************************************************************
+Folha de Estilos para Acionamento de Motor JS
+Professor Flávio Ricardo
+Abril de 2023
+Curso de Webdesign Front-end | Escola SENAI "Professor Vicente Amato"
+Jandira/SP
+******************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 1020px;
+    height: 710px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadro {
+    width: 510px;
+    height: 710px;
+    background-image: url(../assets/panel.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.general {
+    width: 125px;
+    height: 125px;
+}
+
+.indicators,
+.switches {
+    width: 260px;
+    height: 125px;
+}
+
+.motor {
+    width: 510px;
+    height: 710px;
+    background-image: url(../assets/engine.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.motor-on {
+    animation: motor;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes motor {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
